@@ -54,6 +54,7 @@ public class UserServiceImpl implements UserService {
         var user = userRepository.getReferenceById(id);
         var userNotes = notesClient.getNoteByUserId(id);
         return userMapper.toUserWithNotesDto(user, userNotes);
+
     }
 
 }
